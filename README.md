@@ -14,7 +14,7 @@ The main differences are:
 This MLOps accelerator uses IBM Cloud Object Storage (COS) as remote for DVC (via S3 API), an SKLearn model for training, and Watson Machine Learning (WML) for deployment.
 Our notebook repertoire is easily modified to leverage a different data store, custom ML models, and other providers for model deployment. 
 
-**IBM Employees only:** Checkout the [recording](https://ibm.ent.box.com/s/2hco3iifpoiq3nlv354nag30s4l318i3) of our TechFest23 session on this project
+**IBM Employees only:** Checkout the [recording](https://ibm.ent.box.com/s/2hco3iifpoiq3nlv354nag30s4l318i3) of our TechFest23 session for this project
 
 **Disclaimer:** This model is currently no where near academic-grade quality. We focused primarily on quickly constructing an MLOps workflow that works with sustainability data and DVC.
 
