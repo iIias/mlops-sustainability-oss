@@ -14,6 +14,8 @@ The main differences are:
 This MLOps accelerator uses IBM Cloud Object Storage (COS) as remote for DVC (via S3 API), an SKLearn model for training, and Watson Machine Learning (WML) for deployment.
 Our notebook repertoire is easily modified to leverage a different data store, custom ML models, and other providers for model deployment. 
 
+**IBM Employees only:** Checkout the [recording](https://ibm.ent.box.com/s/2hco3iifpoiq3nlv354nag30s4l318i3) of our TechFest23 session on this project
+
 **Disclaimer:** This model is currently no where near academic-grade quality. We focused primarily on quickly constructing an MLOps workflow that works with sustainability data and DVC.
 
 We reserve the right to continously fix, improve, and progress this repertoire. See [todos](TODO.md) for information on upcoming features.
@@ -42,8 +44,18 @@ All of the aforementioned is handled in our notebooks. For you to recreated the 
 
 In order to use the above asset we need to have access to have an IBM environment with authentication. Your IBM Cloud Account should have access following services:
 
-IBM Watson Studio
-IBM Watson Machine Learning (If you are not deploying with a different provider)
-IBM Watson Knowledge Catalog (with Factsheets and Model Inventory)*
-IBM Watson OpenScale
-IBM Cloud Object Storage (If you are not using a different data store)
+- IBM Watson Studio
+- IBM Watson Machine Learning (If you are not deploying with a different provider)
+- IBM Watson Knowledge Catalog (with Factsheets and Model Inventory)*
+- IBM Watson OpenScale
+- IBM Cloud Object Storage (If you are not using a different data store)
+
+Please ascertain you have appropriate access in all the services.
+
+The runs are also governed by the amount of capacity unit hours (CUH) you have access to. If you are running on the free plan please refer to the following links:
+
+- https://cloud.ibm.com/catalog/services/watson-studio
+- https://cloud.ibm.com/catalog/services/watson-machine-learning
+- https://cloud.ibm.com/catalog/services/watson-openscale
+- https://cloud.ibm.com/catalog/services/watson-knowledge-catalog
+
