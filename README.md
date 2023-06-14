@@ -1,6 +1,8 @@
 
 # mlops-sustainability-oss
 
+### Introduction
+
 Welcome 👋 to this MLOps repository.
 Consider this repository a modified version (extended-subset) of our [MLOps-CPD](https://github.com/IBM/MLOps-CPD) repository which is our simplest approach with the most rigorous documentation.
 
@@ -12,4 +14,36 @@ The main differences are:
 This MLOps accelerator uses IBM Cloud Object Storage (COS) as remote for DVC (via S3 API), an SKLearn model for training, and Watson Machine Learning (WML) for deployment.
 Our notebook repertoire is easily modified to leverage a different data store, custom ML models, and other providers for model deployment. 
 
-See [todos](TODO.md)
+**Disclaimer:** This model is currently no where near academic-grade quality. We focused primarily on quickly constructing an MLOps workflow that works with sustainability data and DVC.
+
+We reserve the right to continously fix, improve, and progress this repertoire. See [todos](TODO.md) for information on upcoming features.
+
+### Overview
+
+This subsection will describe our data source, datasets, sub-modules, requirements *etc.* in more detail.
+
+#### Data Source and Datasets
+We use the [Copernicus Data Store](https://cds.climate.copernicus.eu/#!/home) to retrieve historic and current climate data. We are collecting the following datasets and variables:
+
+- 🌍 [ERA5-Land hourly data from 1950 to present](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=form)
+    - ```stl1``` (Soil Temperature Level 1)
+    - ```vswl1``` (Volumetric Soil Water Layer 1)
+    - ```total_preciptation``` (Total Precipitation)
+
+- 🌊 [River discharge and related historical data from the Global Floow Awareness System (GloFAS)](https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-glofas-historical?tab=form)
+    - ```dis24``` (averaged daily river discharge in m^3/s)
+
+Since we want to predict flooding risks, we want to predict the time and place where extremely high river discharge occurs. Therefore, all variables gathered from ERA5 are used to predict our predictant ```dis24```. All data coming from the aforementioned datasets come either in NetCDF or NetCDF4 format, which is easily handled in our Notebooks. 
+We make use of Copernicus' "Sub-region extraction" feature to not get data for the whole globe, but rather for a specified sub-region delimited by N, W, S, E. This allows us to easily make different pipelines (and subsequently deploy different models for different regions). In our example, we set Europe as specified region in our pipeline parameters.
+
+All of the aforementioned is handled in our notebooks. For you to recreated the proposed MLOps lifecycle, you will need to create your own Copernicus account to retrieve personalized credentials, since we are not sharing / hard-coding ours for obvious reasons.
+
+#### Prerequisites on IBM Cloud
+
+In order to use the above asset we need to have access to have an IBM environment with authentication. Your IBM Cloud Account should have access following services:
+
+IBM Watson Studio
+IBM Watson Machine Learning (If you are not deploying with a different provider)
+IBM Watson Knowledge Catalog (with Factsheets and Model Inventory)*
+IBM Watson OpenScale
+IBM Cloud Object Storage (If you are not using a different data store)
