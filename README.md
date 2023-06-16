@@ -60,21 +60,21 @@ The runs are also governed by the amount of capacity unit hours (CUH) you have a
 - https://cloud.ibm.com/catalog/services/watson-knowledge-catalog
 
 
-### Instructions for Project Set-up
+## Instructions for Project Set-up
 
-#### General Set-up
+### General Set-up
 
 For a general tutorial please refer to the regularly maintained instructions in our [main MLOps repository](https://github.com/IBM/MLOps-CPD). We cannot afford to update each repository subsequent to changes or new features in Watson Studio *etc.*, which is why we refer you to the main documentation.
 
 There you will find instructions on Watson Studio Project and Deployment Spaces, Cloud Object Storage set-up, Pipeline set-up *and more*.
 
-#### Where this project deviates
+### Where this project deviates
 
-#### DVC Set-up
+### DVC Set-up
 
 tbd
 
-##### Addendum: Cloud Object Storage Set-up
+### Addendum: Cloud Object Storage Set-up
 
 [DVC](https://dvc.org) is a git-like way to manage large data across systems, and it can connect easily with IBM COS to store and distribute versioned data. This article assumes some familiarity with how to create resources through the cloud.ibm.com dashboard.
 
@@ -85,6 +85,6 @@ Service Credentials > New Credential (Advanced > USE HMAC KEYS ("HMAC": true) an
 **Make sure to make both keys available to the pipeline...** e.g. <br>
 - add them to the ```MLOPS_COS_CREDENTIALS``` with all other Cloud Object Storage secrets.
 
-##### Addendum: Pipeline Set-up
+### Addendum: Pipeline Set-up
 
 tbd
