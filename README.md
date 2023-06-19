@@ -6,6 +6,11 @@
 Welcome 👋 to this MLOps repository.
 Consider this repository a modified version (extended-subset) of our [MLOps-CPD](https://github.com/IBM/MLOps-CPD) repository which is our simplest approach with the most rigorous documentation.
 
+**The Mission:**
+With climate change becoming an increasingly pressing issue, flood risks gain in prevalence. We want to demonstrate how we can leverage data from Copernicus Climate Data Store, and build an MLOps pipeline which is self-sustaining in nature.
+When training a model once - or only re-training it in terms of hyperparameter tuning - the model's accuarcy will decay leaving a more or less unusable model after a given amount of time. 📉
+Once the days for which we predicted flood risks passed and actual data is available, we retrieve the newest data, retrain the model, and benchmark the model against its predecessor, to determine which model to keep and deploy.
+
 The main differences are:
 - Using **climate data from Copernicus** instead of the German Credit Risk Dataset
 - Self-sustaining approach through a scheduled pipeline system that retrieves the most recent weather data
