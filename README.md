@@ -81,12 +81,14 @@ When creating Cloud Object Storage **credentials**, you will need to enable HMAC
 
 Service Credentials > New Credential (Advanced > USE HMAC KEYS ("HMAC": true) and WRITER privilege). We need the access_key_id and secret_access_key from this file.
 
+**Add both keys to your ```credentials.py``` file if you are running locally, or..**
+
 **Make sure to make both keys available to the pipeline...** e.g. <br>
 - add them to the ```MLOPS_COS_CREDENTIALS``` with all other Cloud Object Storage secrets.
 
 ### Addendum: Pipeline Set-up
 
-tbd
+<img width="1878" alt="Screenshot 2023-06-19 at 12 25 10" src="https://github.com/iIias/mlops-sustainability-oss/assets/15169745/5eeef014-7a3f-4866-8378-3ce9e471e21b">
 
 
 ### DVC Set-up
