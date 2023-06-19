@@ -70,13 +70,7 @@ There you will find instructions on Watson Studio Project and Deployment Spaces,
 
 ### Where this project deviates
 
-### DVC Set-up
-
-tbd
-
 ### Addendum: Cloud Object Storage Set-up
-
-[DVC](https://dvc.org) is a git-like way to manage large data across systems, and it can connect easily with IBM COS to store and distribute versioned data. This article assumes some familiarity with how to create resources through the cloud.ibm.com dashboard.
 
 When creating Cloud Object Storage **credentials**, you will need to enable HMAC. 
 
@@ -86,5 +80,24 @@ Service Credentials > New Credential (Advanced > USE HMAC KEYS ("HMAC": true) an
 - add them to the ```MLOPS_COS_CREDENTIALS``` with all other Cloud Object Storage secrets.
 
 ### Addendum: Pipeline Set-up
+
+tbd
+
+
+### DVC Set-up
+
+[DVC](https://dvc.org) is a git-like way to manage large data across systems, and it can connect easily with IBM COS to store and distribute versioned data. This article assumes some familiarity with how to create resources through the cloud.ibm.com dashboard.
+
+#### NOT covered by Notebooks
+
+In order for DVC to be able to actively track datasets or models, you will need to initialize a new empty repository.
+
+Add the information for your Repository to ```credentials.py``` under the ```GIT_REPOSITORY```environment variable.
+It has to have the following format:<br>
+```https://USERNAME:GIT-TOKEN@github.com/USERNAME/REPOSITORY-NAME```
+
+Note: DVC will **not** store your dataset and model but placeholders to track data files and directories. Additionally it will contain your DVC configuration file, which in turn contains your remote (URL, Endpoint, **unhashed** Access Secrets).
+
+#### Covered by Notebooks
 
 tbd
