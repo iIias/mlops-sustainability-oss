@@ -3,13 +3,14 @@
 
 ### Introduction
 
-Welcome 👋 to this MLOps repository.
-Consider this repository a modified version (extended-subset) of our [MLOps-CPD](https://github.com/IBM/MLOps-CPD) repository which is our simplest approach with the most rigorous documentation.
+Welcome 👋 to our MLOps for sustainability repository.
 
 **The Mission:**
 With climate change becoming an increasingly pressing issue, flood risks gain in prevalence. We want to demonstrate how we can leverage data from Copernicus Climate Data Store, and build an MLOps pipeline which is self-sustaining in nature.
 When training a model once - or only re-training it in terms of hyperparameter tuning - the model's accuarcy will decay leaving a more or less unusable model after a given amount of time. 📉
 Once the days for which we predicted flood risks passed and actual data is available, we retrieve the newest data, retrain the model, and benchmark the model against its predecessor, to determine which model to keep and deploy.
+
+Consider this repository a modified version (extended-subset) of our [MLOps-CPD](https://github.com/IBM/MLOps-CPD) repository which is our simplest approach with the most rigorous documentation.
 
 The main differences are:
 - Using **climate data from Copernicus** instead of the German Credit Risk Dataset
@@ -41,7 +42,7 @@ We use the [Copernicus Data Store](https://cds.climate.copernicus.eu/#!/home) to
     - ```dis24``` (averaged daily river discharge in m^3/s)
 
 Since we want to predict flooding risks, we want to predict the time and place where extremely high river discharge occurs. Therefore, all variables gathered from ERA5 are used to predict our predictant ```dis24```. All data coming from the aforementioned datasets come either in NetCDF or NetCDF4 format, which is easily handled in our Notebooks. 
-We make use of Copernicus' "Sub-region extraction" feature to not get data for the whole globe, but rather for a specified sub-region delimited by N, W, S, E. This allows us to easily make different pipelines (and subsequently deploy different models for different regions). In our example, we set Europe as specified region in our pipeline parameters.
+We make use of Copernicus' "Sub-region extraction" feature to not get data for the whole globe, but rather for a specified sub-region delimited by coordinates for N, W, S, E boundaries. This allows us to easily make different pipelines (and subsequently deploy different models for different regions). In our example, we set Europe as specified region in our pipeline parameters.
 
 All of the aforementioned is handled in our notebooks. For you to recreated the proposed MLOps lifecycle, you will need to create your own Copernicus account to retrieve personalized credentials, since we are not sharing / hard-coding ours for obvious reasons.
 
@@ -105,6 +106,16 @@ It has to have the following format:<br>
 
 Note: DVC will **not** store your dataset and model but placeholders to track data files and directories. Additionally it will contain your DVC configuration file, which in turn contains your remote (URL, Endpoint, **unhashed** Access Secrets).
 
-#### Covered by Notebooks
+#### Covered by Notebook
 
-tbd
+Within notebook [a1_init_dvc_and_track_data.ipynb](/notebooks/a1_init_dvc_and_track_data.ipynb) 
+
+- the previouosly created Git Repository is cloned into the temporary filesystem of the CPDaaS Jupyter Runtime.
+- DVC is initialized (```dvc init```)
+- A Cloud Object Storage instance is added to DVC as a remote (using the credentials passed via WS Pipeline Parameters) and subsequently committed to the DVC Git Repository via ```git commit```and ```dvc push```.
+- Create folder structure e.g. ```/data```, ```/model```
+- The full pickle binary of the dataset is added ```dvc add```, ```git commit```, ```dvc push````
+    - Metadata is pushed to repository
+    - Binary is uploaded to COS Bucket
+
+Note: All steps will be repeated by pipeline as a consequence of having the pipeline run according to a schedule. That is of no concern, since redundant cells will be skipped. 
