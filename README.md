@@ -94,7 +94,7 @@ Service Credentials > New Credential (Advanced > USE HMAC KEYS ("HMAC": true) an
 
 ### DVC Set-up
 
-[DVC](https://dvc.org) is a git-like way to manage large data across systems, and it can connect easily with IBM COS to store and distribute versioned data. This article assumes some familiarity with how to create resources through the cloud.ibm.com dashboard.
+[DVC](https://dvc.org) is a git-like way to manage large data across systems, and it can connect easily with IBM COS to store and distribute versioned data. This section assumes some familiarity with how to create resources through the cloud.ibm.com dashboard from [MLOps-CPD](https://github.com/iiias/MLOps-CPD).
 
 #### NOT covered by Notebooks
 
