@@ -1,7 +1,7 @@
 # TODO
 
 **General**
-- [ ] Build workarounds for issues faced with data pulling and management due to missing persistent filesystem in CPDaaS
+- [x] Build workarounds for issues faced with data pulling and management due to missing persistent filesystem in CPDaaS
 - 
 
 **Data**
@@ -15,14 +15,14 @@
         - not that COS credentials must be created with HMAC option enabled
 
 **Model**
-- [ ] (Write notebook for model development?)
+- [x] (Write notebook for model development?)
 - [x] Write notebook for model training
-- [ ] Write notebook for model deployment
-- [ ] Write notebook for getting "newest data" that is supposed to be run weekly.
-- [ ] Write notebook for merging old data with newer data (data_until_last week + data_from_last_week)
+- [x] Write notebook for model deployment
+- [x] Write notebook for getting "newest data" that is supposed to be run weekly.
+- [x] Write notebook for merging old data with newer data (data_until_last week + data_from_last_week)
 
 **MLOps / WS**
-- [ ] Put together pipeline
+- [x] Put together pipeline
 - [ ] Consider and realize pipeline scheduling
 - [ ] (Think about pipeline extension where **model trained on data_until_last_week** is benchmarked against **data_with_last_week**)
 
