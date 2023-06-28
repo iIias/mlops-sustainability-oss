@@ -1,18 +1,7 @@
 
 # mlops-sustainability-oss
 
-Welcome 👋 to this MLOps repository.
-Consider this repository a modified version (extended-subset) of our [MLOps-CPD](https://github.com/IBM/MLOps-CPD) repository which is our simplest approach with the most rigorous documentation.
-
-The main differences are:
-- Using **climate data from Copernicus** instead of the German Credit Risk Dataset
-- Self-sustaining approach through a scheduled pipeline system that retrieves the most recent weather data
-- **Use of Open Source  Software (OSS) for Model and Dataset Versioning** via Data Version Control ([DVC](https://dvc.org))
-
-This MLOps accelerator uses IBM Cloud Object Storage (COS) as remote for DVC (via S3 API), an SKLearn model for training, and Watson Machine Learning (WML) for deployment.
-Our notebook repertoire is easily modified to leverage a different data store, custom ML models, and other providers for model deployment. 
-
-Welcome 👋 to our MLOps for sustainability repository.
+Welcome 👋 to this MLOps for sustainability repository.
 
 **The Mission:**
 With climate change becoming an increasingly pressing issue, flood risks gain in prevalence. We want to demonstrate how we can leverage data from Copernicus Climate Data Store, and build an MLOps pipeline which is self-sustaining in nature.
@@ -29,9 +18,9 @@ The main differences are:
 This MLOps accelerator uses IBM Cloud Object Storage (COS) as remote for DVC (via S3 API), an SKLearn model for training, and Watson Machine Learning (WML) for deployment.
 Our notebook repertoire is easily modified to leverage a different data store, custom ML models, and other providers for model deployment. 
 
-**IBM Employees only:** Checkout the [recording](https://ibm.ent.box.com/s/2hco3iifpoiq3nlv354nag30s4l318i3) of our TechFest23 session for this project
+**🎥 IBM Employees only:** Checkout the [recording](https://ibm.ent.box.com/s/2hco3iifpoiq3nlv354nag30s4l318i3) of our TechFest23 session for this project
 
-**Disclaimer:** This model is currently no where near academic-grade quality. We focused primarily on quickly constructing an MLOps workflow that works with sustainability data and DVC.
+**⚠️ Disclaimer:** This model is currently no where near academic-grade quality. We focused primarily on quickly constructing an MLOps workflow that works with sustainability data and DVC.
 
 We reserve the right to continously fix, improve, and progress this repertoire. See [todos](TODO.md) for information on upcoming features.
 
