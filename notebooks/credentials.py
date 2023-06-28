@@ -8,7 +8,9 @@ def set_env_variables_for_credentials():
     Complete and import this method to test your notebooks outside of a WS Pipeline environment.
     
     """
-
+    
+    # PERSONAL CREDENTIALS
+    
     ## IBM CLOUD (IC)
     os.environ["CLOUD_API_KEY"] = ""
 
@@ -29,8 +31,17 @@ def set_env_variables_for_credentials():
     os.environ["CDS_USER_ID"] = ""
     os.environ["CDS_API_KEY"] = ""
 
-    # GIT REPOSITORY (solely for data and model versioning)
+    # GIT REPOSITORY (solely for data and model versioning w/ DVC)
     os.environ["GIT_REPOSITORY"] = ""
+    os.environ["REPO_NAME"] = "dvc-testing"
+
+    # GENERAL CREDENTIALS 
 
     # VARIABLES FOR TEMP. TESTING
     os.environ["serialized_data_filename"] = "era5-glofas-merged.pkl"
+
+    os.environ["MODEL_FILENAME"] = "xgbr.pkl"
+
+    # For testing
+    os.environ["train_package_dvc_location"] = "data/train_package.pkl"
+    os.environ["test_package_dvc_location"] = "data/test_package.pkl"
