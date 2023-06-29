@@ -42,7 +42,7 @@ We use the [Copernicus Data Store](https://cds.climate.copernicus.eu/#!/home) to
 Since we want to predict flooding risks, we want to predict the time and place where extremely high river discharge occurs. Therefore, all variables gathered from ERA5 are used to predict our predictant ```dis24```. All data coming from the aforementioned datasets come either in NetCDF or NetCDF4 format, which is easily handled in our Notebooks. 
 We make use of Copernicus' "Sub-region extraction" feature to not get data for the whole globe, but rather for a specified sub-region delimited by coordinates for N, W, S, E boundaries. This allows us to easily make different pipelines (and subsequently deploy different models for different regions). In our example, we set Europe as specified region in our pipeline parameters.
 
-All of the aforementioned is handled in our notebooks. For you to recreated the proposed MLOps lifecycle, you will need to create your own Copernicus account to retrieve personalized credentials, since we are not sharing / hard-coding ours for obvious reasons.
+All of the aforementioned tasks are handled in our notebooks. For you to recreat the proposed MLOps lifecycle, you will need to create your own Copernicus account to retrieve personalized credentials, since we are not sharing / hard-coding ours for obvious reasons.
 
 #### Prerequisites on IBM Cloud
 
@@ -87,7 +87,7 @@ Service Credentials > New Credential (Advanced > USE HMAC KEYS ("HMAC": true) an
 
 ### Addendum: Pipeline Set-up
 
-<img width="1878" alt="Screenshot 2023-06-19 at 12 25 10" src="https://github.com/iIias/mlops-sustainability-oss/assets/15169745/5eeef014-7a3f-4866-8378-3ce9e471e21b">
+<img width="1878" alt="Sample Pipeline Layout" src="https://github.com/iIias/mlops-sustainability-oss/assets/15169745/5eeef014-7a3f-4866-8378-3ce9e471e21b">
 
 
 ### DVC Set-up
