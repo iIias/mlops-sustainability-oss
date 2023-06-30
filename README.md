@@ -1,7 +1,7 @@
 
 # mlops-sustainability-oss 🌱
 
-### A self-sustaining end-to-end CP4D MLOps workflow for a flood forecasting model
+### A self-sustaining end-to-end CP4D MLOps workflow for a flood forecasting model with automated data versioning and rollback
 
 Welcome 👋 to this MLOps for sustainability repository.
 
