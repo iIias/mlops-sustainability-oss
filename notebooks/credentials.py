@@ -34,7 +34,9 @@ def set_env_variables_for_credentials():
     # GIT REPOSITORY (solely for data and model versioning w/ DVC)
     os.environ["GIT_REPOSITORY"] = ""
     os.environ["REPO_NAME"] = "dvc-testing"
-
+    os.environ["GIT_USER_EMAIL"] = ""
+    os.enivorn["GIT_USER_NAME"] = ""
+ 
     # GENERAL CREDENTIALS 
 
     # VARIABLES FOR TEMP. TESTING
