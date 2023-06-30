@@ -1,7 +1,9 @@
 
-# mlops-sustainability-oss
+# mlops-sustainability-oss 🌱
 
-Welcome 👋 to this MLOps for sustainability repository. 🌱
+### A self-sustaining end-to-end CP4D MLOps workflow for a flood forecasting model
+
+Welcome 👋 to this MLOps for sustainability repository.
 
 **The Mission:**
 With climate change becoming an increasingly pressing issue, flood risks gain in prevalence. We want to demonstrate how we can leverage data from Copernicus Climate Data Store, and build an MLOps pipeline which is self-sustaining in nature.
