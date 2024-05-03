@@ -1,6 +1,8 @@
 
 # mlops-sustainability-oss 🌱
 
+_Disclaimer: This repository focuses on realizing adequate processes/pipelines in CPD. From an ML perspective, the trained model itself here is dismissable and will not receive the time investment it needs._
+
 ### A self-sustaining end-to-end CP4D MLOps workflow for a flood forecasting model with automated data versioning and rollback
 
 Welcome 👋 to this MLOps for sustainability repository.
