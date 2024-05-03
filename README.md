@@ -54,8 +54,6 @@ In order to use the above asset we need to have access to have an IBM environmen
 
 - IBM Watson Studio
 - IBM Watson Machine Learning (If you are not deploying with a different provider)
-- IBM Watson Knowledge Catalog (with Factsheets and Model Inventory)*
-- IBM Watson OpenScale
 - IBM Cloud Object Storage (If you are not using a different data store)
 
 Please ascertain you have appropriate access in all the services.
@@ -65,7 +63,6 @@ The runs are also governed by the amount of capacity unit hours (CUH) you have a
 - https://cloud.ibm.com/catalog/services/watson-studio
 - https://cloud.ibm.com/catalog/services/watson-machine-learning
 - https://cloud.ibm.com/catalog/services/watson-openscale
-- https://cloud.ibm.com/catalog/services/watson-knowledge-catalog
 
 
 ## Instructions for Project Set-up
